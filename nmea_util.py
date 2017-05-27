@@ -62,7 +62,7 @@ def nmea_to_dataframe(file):
 
         if rmc is not None:
             point = ep.copy()
-            point['fixsequence'] = sequence
+            point['fixseq'] = sequence
             point['fixtime'] = (time - start_time).seconds
             point['timestamp'] = pd.Timestamp(rmc.datetime)
             if rmc.is_valid:
